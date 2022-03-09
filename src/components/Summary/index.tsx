@@ -9,6 +9,7 @@ import { Container } from "./styles";
 export function Summary() {
   const { transactions } = useTransactions()
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const totalDeposits = transactions.reduce((acc, transaction) => {
     if (transaction.type === 'deposit') {
       return acc + transaction.amount
